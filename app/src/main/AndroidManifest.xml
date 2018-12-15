@@ -39,7 +39,7 @@
 
         <activity
             android:name="Main"
-            android:label="Hacker's Keyboard">
+            android:label="Hacker's Keyboard Neon">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
