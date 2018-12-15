@@ -354,10 +354,12 @@
     <string name="layout_ics_darker"  translatable="false">Ice Cream Sandwich (dark hints)</string>
     <string name="layout_trans"  translatable="false">Transparent</string>
     <string name="layout_trans_neon"  translatable="false">Transparent (experimental)</string>
+    <string name="layout_black_neon" translatable="false">Neon</string>
     <string name="layout_material_dark" translatable="false">Material Dark</string>
     <string name="layout_material_light" translatable="false">Material Light</string>
 
     <string-array name="keyboard_layout_modes" translatable="false">
+        <item>@string/layout_black_neon</item>
         <item>@string/layout_ics</item>
         <item>@string/layout_ics_darker</item>
         <item>@string/layout_material_dark</item>
@@ -374,6 +376,7 @@
     above.
     -->
     <string-array name="keyboard_layout_modes_values" translatable="false">
+        <item>7</item>
         <item>0</item>
         <item>6</item>
         <item>4</item>

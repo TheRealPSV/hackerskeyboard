@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="1dp"
+        android:left="1dp"
+        android:right="1dp"
+        android:top="1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="1dp" />
+            <gradient
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:endColor="@color/key_neon_pressed_gradient_end"
+                android:gradientRadius="100%p"
+                android:startColor="@color/latinkeyboard_transparent"
+                android:type="radial" />
+            <stroke
+                android:width="3dp"
+                android:color="@color/key_neon_outline_dark" />
+        </shape>
+    </item>
+</layer-list>

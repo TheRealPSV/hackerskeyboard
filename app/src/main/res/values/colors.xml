@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 /* 
 **
 ** Copyright 2008, The Android Open Source Project
@@ -22,8 +21,8 @@
 -->
 <resources>
     <color name="candidate_normal">#FFFFFFFF</color>
-    <color name="candidate_recommended">#FFFCAE00</color>
-    <color name="candidate_other">#FFFCAE00</color>
+    <color name="candidate_recommended">#FF0088FF</color>
+    <color name="candidate_other">#FF0088FF</color>
     <color name="latinkeyboard_transparent">#00000000</color>
     <color name="latinkeyboard_bar_language_shadow_white">#80000000</color>
     <color name="latinkeyboard_bar_language_shadow_black">#80FFFFFF</color>
@@ -34,7 +33,7 @@
     <color name="latinkeyboard_key_color_white">#FFFFFFFF</color>
     <color name="latinkeyboard_key_color_black">#FF000000</color>
 
-<!--Material Keyboard Colors-->
+    <!--Material Keyboard Colors-->
     <color name="key_background_lxx_dark">#263238</color>
     <color name="key_background_pressed_lxx_dark">#19FFFFFF</color>
     <color name="key_text_color_lxx_dark">#CCFFFFFF</color>
@@ -43,4 +42,14 @@
     <color name="key_background_pressed_lxx_light">#2637474F</color>
     <color name="key_text_color_lxx_light">#000000</color>
     <color name="key_hint_letter_color_lxx_light">#B337474F</color>
+
+    <!--Neon Keyboard Colors-->
+    <color name="key_neon_outline">#00AAFF</color>
+    <color name="key_neon_text">#CFE9FF</color>
+    <color name="key_neon_outline_dark">#8800AAFF</color>
+    <color name="key_neon_pressed_gradient_end">#880088FF</color>
+    <color name="key_neon_preview_gradient_end">#0088FF</color>
+    <color name="key_neon_hint">#880088FF</color>
+    <color name="key_neon_popup_background">#AA000000</color>
+    <color name="key_neon_shadow">#0088FF</color>
 </resources>
