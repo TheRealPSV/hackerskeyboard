@@ -17,9 +17,7 @@ Serbian (Српски), Slovak (Slovenčina), Slovenian
 Latinoamérica), Swedish (Svenska), Tamil (தமிழ்), Thai (ไทย), Turkish (Türkçe),
 and Ukrainian (українська мова).
 
-To install, get **[Hacker's
-Keyboard](https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard)**
-from the Play Store, plus optional [dictionary
+Install optional [dictionary
 packs](https://play.google.com/store/apps/developer?id=Klaus+Weidner).
 
 ## Additional resources ##

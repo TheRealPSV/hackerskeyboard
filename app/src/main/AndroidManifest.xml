@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.pocketworkstation.pckeyboard">
+    package="com.voraindustries.hackerskeyboardneon">
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
@@ -52,6 +52,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="org.pocketworkstation.pckeyboard.SETTINGS" />
+                <action android:name="com.voraindustries.hackerskeyboardneon.SETTINGS" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -63,6 +64,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="org.pocketworkstation.pckeyboard.INPUT_LANGUAGE_SELECTION" />
+                <action android:name="com.voraindustries.hackerskeyboardneon.INPUT_LANGUAGE_SELECTION" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -74,6 +76,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="org.pocketworkstation.pckeyboard.PREFS_ACTIONS" />
+                <action android:name="com.voraindustries.hackerskeyboardneon.PREFS_ACTIONS" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -85,6 +88,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="org.pocketworkstation.pckeyboard.PREFS_VIEW" />
+                <action android:name="com.voraindustries.hackerskeyboardneon.PREFS_VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -96,6 +100,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="org.pocketworkstation.pckeyboard.PREFS_FEEDBACK" />
+                <action android:name="com.voraindustries.hackerskeyboardneon.PREFS_FEEDBACK" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
