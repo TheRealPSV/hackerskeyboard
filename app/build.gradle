@@ -6,8 +6,8 @@ android {
         applicationId 'com.voraindustries.hackerskeyboardneon'
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 1041001
-        versionName "v1.41.1"
+        versionCode 100000000
+        versionName "v1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
