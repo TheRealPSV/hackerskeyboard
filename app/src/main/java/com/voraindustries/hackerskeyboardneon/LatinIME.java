@@ -480,7 +480,7 @@ public class LatinIME extends InputMethodService implements
 
         if (visible && mNotificationReceiver == null) {
             createNotificationChannel();
-            int icon = R.drawable.icon;
+            int icon = R.mipmap.icon;
             CharSequence text = "Keyboard notification enabled.";
             long when = System.currentTimeMillis();
 

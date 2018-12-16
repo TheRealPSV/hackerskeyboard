@@ -19,7 +19,7 @@
         android:allowBackup="true"
         android:backupAgent="LatinIMEBackupAgent"
         android:hardwareAccelerated="false"
-        android:icon="@drawable/icon"
+        android:icon="@mipmap/icon"
         android:killAfterRestore="false"
         android:label="@string/english_ime_name"
         android:restoreAnyVersion="true"
