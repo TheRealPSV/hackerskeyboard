@@ -22,7 +22,7 @@ import java.util.Map;
 
 public class PluginManager extends BroadcastReceiver {
     private static String TAG = "PCKeyboard";
-    private static String HK_INTENT_DICT = "com.voraindustries.DICT";
+    private static String HK_INTENT_DICT = "org.pocketworkstation.DICT";
     private static String SOFTKEYBOARD_INTENT_DICT = "com.menny.android.anysoftkeyboard.DICTIONARY";
     private LatinIME mIME;
     
