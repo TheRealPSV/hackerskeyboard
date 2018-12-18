@@ -25,6 +25,7 @@ public class PluginManager extends BroadcastReceiver {
     private static String TAG = "PCKeyboard";
     private static String HK_INTENT_DICT = "org.pocketworkstation.DICT";
     private static String SOFTKEYBOARD_INTENT_DICT = "com.menny.android.anysoftkeyboard.DICTIONARY";
+    private static String SOFTKEYBOARD_DICT_RESOURCE_METADATA_NAME = "com.menny.android.anysoftkeyboard.dictionaries";
     private LatinIME mIME;
 
     // Apparently anysoftkeyboard doesn't use ISO 639-1 language codes for its locales?
@@ -50,7 +51,7 @@ public class PluginManager extends BroadcastReceiver {
     static void getSoftKeyboardDictionaries(PackageManager packageManager) {
         Intent dictIntent = new Intent(SOFTKEYBOARD_INTENT_DICT);
         List<ResolveInfo> dictPacks = packageManager.queryBroadcastReceivers(
-                dictIntent, PackageManager.GET_RECEIVERS);
+                dictIntent, PackageManager.GET_META_DATA);
         for (ResolveInfo ri : dictPacks) {
             ApplicationInfo appInfo = ri.activityInfo.applicationInfo;
             String pkgName = appInfo.packageName;
@@ -59,7 +60,14 @@ public class PluginManager extends BroadcastReceiver {
                 Resources res = packageManager.getResourcesForApplication(appInfo);
                 //Log.i(TAG, "Found dictionary plugin package: " + pkgName);
                 int dictId = res.getIdentifier("dictionaries", "xml", pkgName);
-                if (dictId == 0) continue;
+                if (dictId == 0) {
+                    try {
+                        dictId = ri.activityInfo.metaData.getInt(SOFTKEYBOARD_DICT_RESOURCE_METADATA_NAME);
+                    } catch (Exception e) {
+                    }
+                }
+                if (dictId == 0)
+                    continue;
                 XmlResourceParser xrp = res.getXml(dictId);
 
                 String assetName = null;
