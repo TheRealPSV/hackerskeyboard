@@ -22,6 +22,7 @@ import android.content.res.Resources;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.InflateException;
+import android.view.Window;
 
 import java.lang.ref.SoftReference;
 import java.util.Arrays;
@@ -146,6 +147,12 @@ public class KeyboardSwitcher implements
         return sInstance;
     }
 
+    private static Window window;
+
+    public static void setWindow(Window inputWindow) {
+        window = inputWindow;
+    }
+
     private KeyboardSwitcher() {
         // Intentional empty constructor for singleton.
     }
@@ -165,13 +172,6 @@ public class KeyboardSwitcher implements
         sInstance.mSymbolsShiftedId = sInstance.makeSymbolsShiftedId(false);
     }
 
-    /**
-     * Sets the input locale, when there are multiple locales for input. If no
-     * locale switching is required, then the locale should be set to null.
-     *
-     * @param locale the current input locale, or null for default locale with no
-     *               locale button.
-     */
     public void setLanguageSwitcher(LanguageSwitcher languageSwitcher) {
         mLanguageSwitcher = languageSwitcher;
         languageSwitcher.getInputLocale(); // for side effect
@@ -590,6 +590,7 @@ public class KeyboardSwitcher implements
                     mInputView = (LatinKeyboardView) mInputMethodService
                             .getLayoutInflater().inflate(THEMES[newLayout],
                                     null);
+                    mInputView.updateNavbar(window);
                     tryGC = false;
                 } catch (OutOfMemoryError e) {
                     tryGC = LatinIMEUtil.GCUtils.getInstance().tryGCOrWait(

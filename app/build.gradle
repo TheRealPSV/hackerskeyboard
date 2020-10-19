@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId 'com.voraindustries.hackerskeyboardneon'
         minSdkVersion 14
-        targetSdkVersion 28
-        versionCode 100000001
-        versionName "v1.0.1"
+        targetSdkVersion 29
+        versionCode 100000002
+        versionName "v1.0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {

@@ -695,6 +695,7 @@ public class LatinIME extends InputMethodService implements
 
     @Override
     public View onCreateInputView() {
+        KeyboardSwitcher.setWindow(getWindow().getWindow());
         setCandidatesViewShown(false);  // Workaround for "already has a parent" when reconfiguring
         mKeyboardSwitcher.recreateInputView();
         mKeyboardSwitcher.makeKeyboards(true);

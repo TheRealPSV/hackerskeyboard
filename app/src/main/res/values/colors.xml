@@ -32,6 +32,7 @@
     <color name="latinkeyboard_feedback_language_text">#FFFFFFFF</color>
     <color name="latinkeyboard_key_color_white">#FFFFFFFF</color>
     <color name="latinkeyboard_key_color_black">#FF000000</color>
+    <color name="navbar_color">#010101</color>
 
     <!--Material Keyboard Colors-->
     <color name="key_background_lxx_dark">#263238</color>

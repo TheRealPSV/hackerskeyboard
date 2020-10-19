@@ -25,10 +25,12 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
+import android.view.Window;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
@@ -51,7 +53,7 @@ public class LatinKeyboardView extends LatinKeyboardBaseView {
     static final int KEYCODE_NEXT_LANGUAGE = -104;
     static final int KEYCODE_PREV_LANGUAGE = -105;
     static final int KEYCODE_COMPOSE = -10024;
-    
+
 	// The following keycodes match (negative) KeyEvent keycodes.
     // Would be better to use the real KeyEvent values, but many
     // don't exist prior to the Honeycomb API (level 11).
@@ -105,7 +107,7 @@ public class LatinKeyboardView extends LatinKeyboardBaseView {
     private boolean mDroppingEvents;
     /**
      * Whether multi-touch disambiguation needs to be disabled for any reason. There are 2 reasons
-     * for this to happen - (1) if a real multi-touch event has occured and (2) we've opened an 
+     * for this to happen - (1) if a real multi-touch event has occured and (2) we've opened an
      * extension keyboard.
      */
     private boolean mDisableDisambiguation;
@@ -116,9 +118,7 @@ public class LatinKeyboardView extends LatinKeyboardBaseView {
     private int mExtensionLayoutResId = 0;
     private LatinKeyboard mExtensionKeyboard;
 
-    public LatinKeyboardView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
+    private Context context;
 
     public LatinKeyboardView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
@@ -184,16 +184,27 @@ public class LatinKeyboardView extends LatinKeyboardBaseView {
             mMiniKeyboardPopup.setClippingEnabled(clippingEnabled);
             mMiniKeyboardVisible = false;
         }
+        this.context = context;
+    }
+
+    public LatinKeyboardView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public void updateNavbar(Window window) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.setNavigationBarColor(ContextCompat.getColor(context, R.color.navbar_color));
+        }
     }
 
     public void setPhoneKeyboard(Keyboard phoneKeyboard) {
         mPhoneKeyboard = phoneKeyboard;
     }
 
-    public void setExtensionLayoutResId (int id) {
+    public void setExtensionLayoutResId(int id) {
         mExtensionLayoutResId = id;
     }
-    
+
     @Override
     public void setPreviewEnabled(boolean previewEnabled) {
         if (getKeyboard() == mPhoneKeyboard) {
